@@ -44,19 +44,14 @@ Any stable version of these software tools is also acceptable.
   
 Where $query_fasta represents all genomic sequences to be grouped, $meta_file shows the GISAID ID, collection country, and collection year of all isolates, and $thre is the cutoff value of sequence similarity used in CD-HIT. The input formats are detailed in the example files.
      
-
-#### Align the sequences using MAFFT:
-        
-`mafft --auto --thread -1 --quiet $nr_query_fasta  > $aligned_nr_query_fasta`  
-`mafft --auto --thread -1 --quiet $query_fasta  > $aligned_query_fasta`  
   
   
 ### Quick start of the MCU-based combination  
 #### Run the pipeline script as follows:  
   
-`perl pipeline.pl $aligned_query_fasta $aligned_nr_query_fasta $meta_file`  
+`perl pipeline.pl $query_fasta $query_fasta_nr $meta_file`  
   
-The inputs are the results from the epidemiological combination step. Specific calculations can be performed using corresponding scripts based on the script descriptions.  
+The input $query_fasta_nr is the result from the epidemiological combination step. Specific calculations can be performed using corresponding scripts based on the script descriptions.  
 
 ### Pipeline of the distance-based combination  
 #### Calculate the inter-MCUs sequence similarities using cal_inter_ss.pl:  
