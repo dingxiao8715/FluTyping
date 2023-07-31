@@ -51,7 +51,7 @@ Where $query_fasta represents all genomic sequences to be grouped, $meta_file sh
   
 `perl pipeline.pl $query_fasta $query_fasta_nr $meta_file`  
   
-The input $query_fasta_nr is the result from the epidemiological combination step. Specific calculations can be performed using corresponding scripts based on the script descriptions.  
+The input $query_fasta_nr is the non-redundant genomic sequences from the epidemiological combination step. Specific calculations can be performed using corresponding scripts based on the script descriptions.  
 
 ### Pipeline of the distance-based combination  
 #### Calculate the inter-MCUs sequence similarities using cal_inter_ss.pl:  
@@ -65,7 +65,7 @@ Here, $MCU_clu_fasta represents the representative genomic sequences from the MC
 `perl obtain_matrix.pl $pair_ss > $matrix_ss`  
 `Rscript mclust.R $matrix_ss $num_clu $output`
   
-The inputs $pair_ss are the pairwise sequence similarities of MCUs from the previous step, $num_clu is the number of the MCUs, and the $output shows the graphical quantification of the assessment. The optimal number of clusters will be printed in the terminal.
+The inputs $pair_ss are the pairwise sequence similarities of MCUs from the previous step, $num_clu is the maximal number of the predicted clusters of the MCUs, and the $output shows the graphical quantification of the assessment. The optimal number of clusters will be printed in the terminal.
   
 #### Perform hierarchical clustering of the converged MCUs in R:  
   
