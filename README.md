@@ -56,9 +56,10 @@ The input $query_fasta_nr is the non-redundant genomic sequences from the epidem
 ### Pipeline of the distance-based combination  
 #### Calculate the inter-MCUs sequence similarities using cal_inter_ss.pl:  
   
-`perl cal_inter_ss.pl $MCU_clu_fasta $cluster_info $thread > $output`  
+`mafft --auto --quite --thread -1 $query_fasta > $aligned_query_fasta`  
+`perl cal_inter_ss.pl $aligned_query_fasta $cluster_info $thread > $output`  
   
-Here, $MCU_clu_fasta represents the representative genomic sequences from the MCU-based combination, $cluster_info contains the isolate IDs in all clusters, and $thread is the number of cores on your computer expected to be used.
+Here, $cluster_info contains the isolate IDs in all clusters of the combined MCUs, and $thread is the number of cores on your computer expected to be used.
   
 #### Assess the optimal number of clusters using the Bayesian Information Criterion (BIC) via the R package mclust:    
   
