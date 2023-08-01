@@ -54,7 +54,7 @@ The input $query_fasta_nr is the non-redundant genomic sequences from the epidem
 `mafft --auto --quite --thread -1 $query_fasta > $aligned_query_fasta`  
 `perl cal_inter_ss.pl $aligned_query_fasta $cluster_info $thread > $output`  
   
-Here, $cluster_info contains the isolate IDs in all clusters of the combined MCUs, and $thread is the number of cores on your computer expected to be used.
+Here, $cluster_info contains the isolates IDs in all clusters of the combined MCUs, and $thread is the number of cores on your computer expected to be used.
   
 #### Assess the optimal number of clusters using the Bayesian Information Criterion (BIC) via the R package mclust:    
   
@@ -69,6 +69,11 @@ The inputs $pair_ss are the pairwise sequence similarities of MCUs from the prev
   
 Here, $matrix_ss is the matrix of pairwise sequence similarities of all MCUs, $opt_num_clu is the optimal number of clusters evaluated from mclust, and the resulted clusters of all MCUs will be output in the $output file.  
     
+## Output  
+
+The representative genomic sequences of combined MCUs are in the file of "final_rep.fasta", and the file of "list_cluster_rX" contains the isolates IDs in all combined MCUs, which "X" represents the final circulation. The final clusters of all genomic sequences are showed in the self-naming file of "$output" in the step of **"Perform hierarchical clustering of the converged MCUs in R"**. All generated files in the MCU-based combination pipeline are in the folder of "files_log".  
+  
+
 ## Example  
 The example files contain the input genomic sequences in fasta format (example.fasta) and the corresponding epidemiological informaition of all isolates (example.meta).  
 
