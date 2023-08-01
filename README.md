@@ -73,6 +73,13 @@ Here, $matrix_ss is the matrix of pairwise sequence similarities of all MCUs, $o
 The example files contain the input genomic sequences in fasta format (example.fasta) and the corresponding epidemiological informaition of all isolates (example.meta).  
 
 ## Reference  
-
+  
+Paradis E, Schliep K. ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R. Bioinformatics. 2019, 35, 526-528.  
+Guangchuang Yu, David Smith, Huachen Zhu, Yi Guan, Tommy Tsan-Yuk Lam. ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. Methods in Ecology and Evolution. 2017, 8(1):28-36.  
+Guangchuang Yu, Tommy Tsan-Yuk Lam, Huachen Zhu, Yi Guan. Two methods for mapping and visualizing associated data on phylogeny using ggtree. Molecular Biology and Evolution. 2018, 35(12):3041-3043.  
+Scrucca L., Fop M., Murphy T. B. and Raftery A. E. mclust 5: clustering, classification and density estimation using Gaussian finite mixture models The R Journal 8/1. 2016, 289-317.  
+Yasuo Tabei, Hisanori Kiryu, Taishin Kin, Kiyoshi Asai. A fast structural multiple alignment method for long RNA sequences. BMC Bioinformatics. 2008, 9:33.  
+Price, M.N., Dehal, P.S., and Arkin, A.P.FastTree: Computing Large Minimum-Evolution Trees with Profiles instead of a Distance Matrix. Molecular Biology and Evolution. 2009, 26:1641-1650.  
+  
 ## Author
 Xiao Ding, dx@ism.cams.cn
