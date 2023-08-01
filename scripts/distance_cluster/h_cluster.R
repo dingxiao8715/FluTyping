@@ -1,0 +1,7 @@
+argv = commandArgs (TRUE)
+data <- read.table(argv[1], header = T, sep = "\t", row.names = 1)
+#data <- scale(data)
+d <- dist(data, method = "euclidean")
+fit <- hclust(d, method = "average")
+groups <- cutree(fit, k = argv[2])
+write.table (groups, argv[3], quote = F, col.names = F, row.names = T, sep = "\t", append = F) 
