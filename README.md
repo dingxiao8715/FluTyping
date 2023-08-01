@@ -48,7 +48,7 @@ Where $query_fasta represents all genomic sequences to be grouped, $meta_file sh
   
 The input $query_fasta_nr is the non-redundant genomic sequences from the epidemiological combination step. Specific calculations can be performed using corresponding scripts based on the script descriptions.  
 
-### Pipeline of the distance-based combination  
+### Pipeline of the distance-based cluster  
 #### Calculate the inter-MCUs sequence similarities using cal_inter_ss.pl:  
   
 `mafft --auto --quite --thread -1 $query_fasta > $aligned_query_fasta`  
